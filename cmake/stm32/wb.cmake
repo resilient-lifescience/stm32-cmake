@@ -1,22 +1,22 @@
 set(STM32_WB_TYPES 
-    WB55xx WB55xx WB35xx WB15xx WB50xx WB30xx WB10xx WB5Mxx
+    WB55xx WB55xx WB35xx WB15xx WB50xx WB30xx WB10xx WB5Mxx WB1Mxx
 )
 set(STM32_WB_TYPE_MATCH 
-   "WB55.C" "WB55.[EGY]" "WB35.." "WB15.." "WB50.." "WB30.." "WB10.." "WB5M.."
+   "WB55.C" "WB55.[EGY]" "WB35.." "WB15.." "WB50.." "WB30.." "WB10.." "WB5M.." "WB1M.."
 )
 
 # this is not full RAM of the chip but only the part allocated to M4 core (SRAM1 in datasheet)
 set(STM32_WB_RAM_SIZES 
-     64K 192K  32K  12K 64K  32K  12K 192K
+     64K 192K  32K  12K 64K  32K  12K 192K 12K
 )
 
 # WB series need special area for SRAM2 shared with core M0PLUS
 set(STM32_WB_RAM_SHARE_SIZES 
-     10K  10K  10K  10K  10K  10K  10K  10K
+     10K  10K  10K  10K  10K  10K  10K  10K 10K
 )
 
 set(STM32_WB_CCRAM_SIZES 
-      0K   0K   0K   0K   0K   0K   0K   0K
+      0K   0K   0K   0K   0K   0K   0K   0K  0K
 )
 
 stm32_util_create_family_targets(WB M4)
